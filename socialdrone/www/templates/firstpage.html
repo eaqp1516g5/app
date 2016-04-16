@@ -1,0 +1,32 @@
+<ion-view view-title="SocialDrone">
+  <ion-content>
+    <div class="bar bar-subheader bar-stable static text-center">
+      <strong class="title">Home</strong>
+    </div>
+    <div class="im-wrapper">
+      <h4 class="border-top"><i class="icon ion-arrow-shrink"></i> Messages</h4>
+      <div class="list card stable-bg" ng-repeat="msg in messages">
+        <div class="item item-avatar">
+          <!--<img src="img/arya.jpg">-->
+          <h2>{{msg.username}}</h2>
+          <p>{{msg.Date}}</p>
+        </div>
+        <div class="item item-body">
+          {{msg.text}}
+          <p>
+            <a class="subdued">{{msg.like}} Like</a>
+            <a class="subdued">{{msg.comment.length}} Comments</a>
+          </p>
+        </div>
+        <div class="item tabs tabs-secondary tabs-icon-left">
+          <a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="LikeMensaje(msg._id)">
+            <i class="icon ion-thumbsup"></i> Like
+          </a>
+          <a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5">
+            <i class="icon ion-chatbox"></i> Comment
+          </a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
